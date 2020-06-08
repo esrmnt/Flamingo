@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  
+  <Commands package="guidFlamingoPackage">
+    <Menus>
+      <Menu guid="guidFlamingoPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>Flamingo</ButtonText>
+          <CommandName>Flamingo</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+    
+    <Groups>
+      <Group guid="guidFlamingoPackageCmdSet1" id="MyMenuGroup" priority="0x0500">
+        <Parent guid="guidFlamingoPackageCmdSet" id="TopLevelMenu" />
+      </Group>
+      <Group guid="guidFlamingoPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidFlamingoPackageCmdSet" id="TopLevelMenu" />
+      </Group>
+    </Groups>
+    
+    <Buttons>
+      <Button guid="guidFlamingoPackageCmdSet1" id="cmdidXSLTDebugCommand" priority="0x0100" type="Button">
+        <Parent guid="guidFlamingoPackageCmdSet1" id="MyMenuGroup" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Start XSLT Debugging</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidFlamingoPackageCmdSet" id="XSLTRunCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidFlamingoPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Start XSLT Without Debugging</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>    
+      <Bitmap guid="guidImages" href="Resources\XSLTRunCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages1" href="Resources\XSLTDebugCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidFlamingoPackage" value="{f25074c2-500e-468c-90ae-d7cf15a3d3c0}" />
+
+    <GuidSymbol name="guidFlamingoPackageCmdSet" value="{e59e425b-e696-45f6-aeaa-7fe1cddfb04b}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="XSLTRunCommandId" value="0x0100" />
+      <IDSymbol name="TopLevelMenu" value="0x1021" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{e8fac4dc-771c-4262-a8c0-553efabc75eb}">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{52225c81-539a-4ba7-bf47-c98d867ba112}" name="guidFlamingoPackageCmdSet1">
+      <IDSymbol name="MyMenuGroup" value="4128" />
+      <IDSymbol name="cmdidXSLTDebugCommand" value="256" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{33c124b4-ec43-467f-b6fd-fc11abb79b09}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
