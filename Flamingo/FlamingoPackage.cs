@@ -26,6 +26,7 @@ namespace Flamingo
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(FlamingoPackage.PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideToolWindow(typeof(FlamingoProperties))]
     public sealed class FlamingoPackage : AsyncPackage
     {
         /// <summary>
@@ -49,6 +50,7 @@ namespace Flamingo
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await XSLTRunCommand.InitializeAsync(this);
             await XSLTDebugCommand.InitializeAsync(this);
+            await FlamingoPropertiesCommand.InitializeAsync(this);
         }
 
         #endregion

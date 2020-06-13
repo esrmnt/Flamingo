@@ -40,11 +40,20 @@
           <ButtonText>Start XSLT Without Debugging</ButtonText>
         </Strings>
       </Button>
+      
+      <Button guid="guidFlamingoPackageCmdSet" id="cmdidFlamingoPropertiesCommand" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="guidImages2" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Flamingo</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <Bitmaps>    
       <Bitmap guid="guidImages" href="Resources\XSLTRunCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages1" href="Resources\XSLTDebugCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages2" href="Resources\FlamingoPropertiesCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
   </Commands>
 
@@ -55,6 +64,7 @@
       <IDSymbol name="MyMenuGroup" value="0x1020" />
       <IDSymbol name="XSLTRunCommandId" value="0x0100" />
       <IDSymbol name="TopLevelMenu" value="0x1021" />
+      <IDSymbol value="4130" name="cmdidFlamingoPropertiesCommand" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{e8fac4dc-771c-4262-a8c0-553efabc75eb}">
@@ -72,6 +82,15 @@
     </GuidSymbol>
   
     <GuidSymbol value="{33c124b4-ec43-467f-b6fd-fc11abb79b09}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{37737ea9-d718-4dc8-91bb-c494b6c08220}" name="guidImages2">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />
