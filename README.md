@@ -10,4 +10,4 @@
 ## Credits
 
 ## License 
-[GPL-3.0] (https://github.com/esrmnt/Flamingo/blob/master/LICENSE)
+[GPL-3.0](https://github.com/esrmnt/Flamingo/blob/master/LICENSE)
