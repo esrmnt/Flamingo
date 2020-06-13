@@ -9,6 +9,7 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
              Name="MyToolWindow">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -22,43 +23,71 @@
             <RowDefinition Height="23"/>            
             <RowDefinition Height="23"/>
         </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0" Grid.Column="0" Background="Red" Height="auto" >
-            <TextBlock VerticalAlignment="Center">Properties</TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="Blue" Height="auto" >
-            <TextBlock VerticalAlignment="Center">version</TextBlock>            
-        </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="0" Background="Green" Height="auto">
-            <TextBlock VerticalAlignment="Center">Input</TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="0" Background="Yellow" Height="auto">
-            <TextBlock VerticalAlignment="Center">Output</TextBlock>
-        </StackPanel>
 
-        <GridSplitter Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" Height="Auto" Width="1"/>
+        <Border Grid.Row="1" Grid.Column="0" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,1,1,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center">Version</TextBlock>
+            </StackPanel>
+        </Border>
 
+        <Border Grid.Row="2" Grid.Column="0" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,0.5,1,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center">Input</TextBlock>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="0" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,0.5,1,1" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center">Output</TextBlock>
+            </StackPanel>
+        </Border>
+
+        <GridSplitter Grid.Column="1" Grid.Row="1" Grid.RowSpan="3"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Center" 
+                      Height="Auto" Width="1" Background="Transparent"/>
         
-        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Background="Blue">
-            <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="23">
-                <ComboBoxItem>v1.0</ComboBoxItem>
-                <ComboBoxItem>v2.0</ComboBoxItem>
-                <ComboBoxItem IsSelected="True">v3.0</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="2" Background="Green">
-            <TextBox VerticalAlignment="Stretch" Height="23"></TextBox>
-        </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="2" Background="Yellow" Height="auto" VerticalAlignment="Stretch">
-            <TextBox Height="23"></TextBox>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="2" Grid.Column="3" Background="Green" Height="auto">
-            <Button Height="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">...</Button>
-        </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="3" Background="Yellow" Height="auto">
-            <Button Height="23" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">...</Button>
-        </StackPanel>
+        <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,1,1,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ComboBoxItem>v1.0</ComboBoxItem>
+                    <ComboBoxItem>v2.0</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">v3.0</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="2" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,0.5,1,0.5" VerticalAlignment="Stretch" >
+            <StackPanel  VerticalAlignment="Center">
+                <TextBox Name="txtInputFile" VerticalContentAlignment="Stretch"></TextBox>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="2"  Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="1,0.5,0.5,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <TextBox Name="txtOutputFile" VerticalContentAlignment="Stretch"></TextBox>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="3" Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="0.5,0.5,0.5,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="1" 
+                        Content="..." Name="btnOpenInputFile" Click="btnOpenInputFile_Click"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="3"  Background="Transparent" 
+                BorderBrush="Gray" BorderThickness="0.5,0.5,0.5,0.5" VerticalAlignment="Stretch" >
+            <StackPanel VerticalAlignment="Center">
+                <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="1"
+                        Content="..." Name="btnOpenOutputFile" Click="btnOpenOutputFile_Click"/>
+            </StackPanel>
+        </Border>
     </Grid>
-
 </UserControl>
