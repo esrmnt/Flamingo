@@ -11,4 +11,5 @@
 ## Credits
 
 ## License 
-[MIT](https://github.com/esrmnt/Flamingo/blob/master/LICENSE)
+* [MIT](https://github.com/esrmnt/Flamingo/blob/master/LICENSE)
+* [The Saxon XSLT and XQuery Processor from Saxonica Limited](http://www.saxonica.com/)
